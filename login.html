@@ -1,39 +1,51 @@
 <!DOCTYPE html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add meta tags, title, and link to styles.css here -->
+<!-- Add meta tags, title, and link to styles.css here -->
     <title>E-Shope</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel = "shortcut icon" href = "images/logo.ico" type =" image/x-icon">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylelogin.css">
+    <meta name = "keywords" content =" HTML, Web Development, E-Commerce Site">
+    <meta name = "author" content ="Isaac Jacob & Hutton Ledingham" >
+    <link rel = "shortcut icon" href = "images/logo.ico" type =" image/x-icon">
 </head>
 <body>
     <header>
         <!-- Logo and website name go here -->
-        <title>E=Shope</title>
-        <img width="150 px" 
+        <title>E-Shope</title>
+        <img width="75 px" 
         src = "images/logo.png">
         <h1>E-Shope</h1>
     </header>
-    <div>
-        <h2><u>Pages</u></h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-        </div>
-
+    <div> 
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        
+    </div>
     <main>
+    
+       
     <fieldset>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+       
+        <section class="info">
+            <label for="username">Username:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your username"></br>
             <label for="Password">Password:</label><br>
-            <input type="password" id="Password" name="Password"><br>
-            <br><button type ="button">Login</button><br>           
-            <br><a href="#signup">Sign Up</a>
+            <input type="password" id="Password" name="Password" placeholder="Enter your password"><br>
+         </section>
+
+    <section class="loginbutton">
+            <br><button type ="button">Login</button><br>    
+            
+    </section>
+
+    <section class="signup">
+            <br><p>Dont have an account?</p><a href="#sign up">Sign Up here</a>
+    </section>
 
         </fieldset>
         </main>

@@ -1,0 +1,105 @@
+body{
+    margin: 0px;
+}
+
+header{
+    background-color: #333;
+
+    padding: 20px;
+    margin: 0px;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: grey;
+}
+
+fieldset{
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    background-color: #ddd;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    display: block;
+    border-color: #ddd;
+    
+    
+}
+
+.info
+{
+    text-align: ;
+    align-self: center;
+
+
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+   
+    
+
+}
+
+.loginbutton{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: green;
+    opacity: 0.5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.loginbutton:hover{
+    color:  #45A049;
+    opacity: 1;
+
+}
+
+.signup{
+    
+    display: flex;
+    color: ;
+    align-content: center;
+    justify-content: center;
+    
+    
+
+}
+
+
+
+footer{
+    background-color: #333;
+    padding: 10px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+}
