@@ -37,8 +37,13 @@ a:hover{
 }
 
 main{
+    
     color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    
 }
+
 table{
     display: flex;
     background-color: lightgrey;
@@ -52,13 +57,7 @@ table{
 }
 
 
-main{
-    
-    color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    #ddd
-}
+
 
 .section{
     background-color: #f9f9f9;
@@ -67,6 +66,23 @@ main{
     border-radius: 10px;
     flex-basis: calc(50% - 40px); /* Each product card takes up 50% of the container width minus margin */
     text-align: center; /* Center-align content */
+}
+
+@media screen and (min-width: 400px) {
+    .section {
+        flex-basis: calc(50% - 40px); /* Each product card takes up 50% of the container width minus margin */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        flex-basis: calc(100%); /* Each product card takes up 100% of the container width minus margin */
+    }
+}
+@media screen and (min-width: 769px) {
+    .section {
+        flex-basis: calc(100%); /* Each product card takes up 100% of the container width minus margin */
+    }
 }
 
 .section:hover{
