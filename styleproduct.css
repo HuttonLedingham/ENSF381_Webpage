@@ -35,23 +35,66 @@ a{
 a:hover{
     color: grey;
 }
+
+main{
+    color: ;
+}
 table{
     display: flex;
-    background-color: #ddd;
+    background-color: lightgrey;
     padding: 20px;
     margin: 20px;
+    border-radius: 5px;
     color: black;
     justify-content: center;
+    align-content: center;
+
 }
 
-.colouredPencil{
-    display: ;
-    color: black;
-    align-items: center;
+
+.box {
+    background-color: white;
+}
+
+.section{
     background-color: #f9f9f9;
-    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    flex-basis: calc(50% - 40px); /* Each product card takes up 50% of the container width minus margin */
+    text-align: center; /* Center-align content */
 }
 
+.section:hover{
+    background-color: #ffffff;
+}
+
+.productimage{
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pricetext{
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+
+button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    border-color: gray;
+}
+
+button:hover{
+    background-color: #45A049;
+}
 
 
     footer{
