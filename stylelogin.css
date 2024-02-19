@@ -48,6 +48,7 @@ fieldset{
     border-radius: 10px;
     display: block;
     border-color: white;
+    
 
 }
 
@@ -67,7 +68,7 @@ fieldset{
 .info{
     display: block;
     margin: 10px;
-    text-align: center;
+    
 }
 
 .info label{
@@ -143,7 +144,7 @@ fieldset{
 }
 .signup:hover{
     text-decoration: underline;
-    color: blue;
+    color: rgb(106, 106, 216);
 
 }
 
