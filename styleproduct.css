@@ -37,7 +37,7 @@ a:hover{
 }
 
 main{
-    color: ;
+    color: #ddd;
 }
 table{
     display: flex;
@@ -52,8 +52,12 @@ table{
 }
 
 
-.box {
-    background-color: white;
+main{
+    
+    color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    #ddd
 }
 
 .section{
@@ -61,7 +65,6 @@ table{
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
     flex-basis: calc(50% - 40px); /* Each product card takes up 50% of the container width minus margin */
     text-align: center; /* Center-align content */
 }
