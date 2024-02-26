@@ -61,12 +61,19 @@ div a:hover{
     background-color: green;
 }
 .customer-reviews{
-    display: flex;
+    display: block;
     flex-direction: column;
     background-color: #ddd;
     padding: 10px;
     margin: 20px;
 
+}
+
+.star{
+    color: gold;
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;    
+    -webkit-text-stroke-color: black;
 }
 
 h2{
