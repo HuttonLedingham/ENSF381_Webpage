@@ -256,3 +256,15 @@ form input
     width: auto;
     display: none;
 }
+
+/*Sign up */
+.signup-form{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
