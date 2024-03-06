@@ -244,3 +244,15 @@ form input
     text-decoration: underline;
     color: blue;
 }
+
+.login-output{
+    border: black;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    width: auto;
+    display: none;
+}
