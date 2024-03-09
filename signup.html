@@ -7,6 +7,73 @@
         <link rel="stylesheet" href="styles.css"></head>
         <link rel = "shortcut icon" href = "images/logo.ico" type =" image/x-icon">
         <meta charset="UTF-8">
+        <script>
+            document.addEventListener('DOMContentLoaded', function afterRender() {
+                var buttonElement = document.querySelector("button[type=button]");
+					buttonElement.addEventListener('click', 
+					function(){
+                        checkForValidInputs();
+
+					})
+            });
+
+            function checkForValidInputs(){
+                var signupOutput = document.getElementsByClassName("signup-output")[0];
+                signupOutput.innerHTML = "";
+                username = document.querySelector("input[type = username]").value;
+                password = document.querySelector("input[id = Password]").value;
+                confirmPassword = document.querySelector("input[id = ConfirmPassword]").value;
+                email = document.querySelector("input[type = email]").value;
+                let feedback = [];
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}" 
+
+                if(!(/^[a-zA-Z][a-zA-Z0-9_-]{3,20}$/.test(username))){
+                    para = document.createElement("p");
+                    node = document.createTextNode("Check username.");
+                    para.appendChild(node);
+                    signupOutput.appendChild(para)
+                    console.log("Username")
+                }
+
+                if(!(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-\_=+\[\]{}|;:'",.<>?/`~]).{8,}$/.test(password))){
+                    para = document.createElement("p");
+                    node = document.createTextNode("Check password.");
+                    para.appendChild(node);
+                    signupOutput.appendChild(para)
+
+                    console.log("password")
+
+                }
+
+                if(password != confirmPassword){
+                    para = document.createElement("p");
+                    node = document.createTextNode("Passwords do not match.");
+                    para.appendChild(node);
+                    signupOutput.appendChild(para)
+                    console.log("confirmPassword")
+
+                }
+
+                if(signupOutput.children.length == 0){
+                    para = document.createElement("p");
+                    node = document.createTextNode("Signup complete!");
+                    para.appendChild(node);
+                    signupOutput.appendChild(para)
+                    console.log("complete")
+                }
+
+                var emailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.(com|net|io)$/;
+                if(!emailFormat.test(email)){
+                    para = document.createElement("p");
+                    node = document.createTextNode("Check email.");
+                    para.appendChild(node);
+                    signupOutput.appendChild(para)
+                    console.log("email")
+                }
+
+                signupOutput.style.display = 'block';
+            }
+        </script>
     <body>
         <header>
             <img width="150 px" 
@@ -39,7 +106,9 @@
                 </form>
             </section>
         </main>
-
+        <div class = "signup-output">
+            <p></p>
+        </div>
         <footer>
             <p>Copy right E-Shope @2024</p>
         </footer>

@@ -268,3 +268,12 @@ form input
     margin: 20px;
     border-radius: 10px;
 }
+
+.signup-output{
+    color: black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    width: auto;
+    display: none;
+}
