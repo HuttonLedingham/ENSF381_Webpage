@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<!-- index.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Add meta tags, title, and link to styles.css here -->
-    <title>E-Shope</title>
     <meta charset="UTF-8">
+    <title>E-Shope</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name = "keywords" content =" HTML, Web Development, E-Commerce Site">
-    <meta name = "author" content ="Isaac Jacob & Hutton Ledingham" >
-    <link rel = "shortcut icon" href = "images/logo.ico" type =" image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Function to handle adding a product to the cart
+        function addToCart(productName, unitPrice) {
+            // Check if the product is already in the cart
+            var cartItem = document.getElementById(productName);
+            if (cartItem) {
+                // If yes, increase the quantity by 1
+                var quantity = parseInt(cartItem.querySelector('.quantity').textContent);
+                cartItem.querySelector('.quantity').textContent = quantity + 1;
+                console.log(addToCart)
+            } else {
+                // If not, create a new cart item
+                var cartSection = document.getElementById('cart');
+                var newCartItem = document.createElement('div');
+                newCartItem.id = productName;
+                newCartItem.innerHTML = `
+                    <p>${productName}</p>
+                    <p class="unit-price">${unitPrice}</p>
+                    <p class="quantity">1</p>
+                    <button class="remove-btn" onclick="removeFromCart('${productName}')">Remove</button>
+                `;
+                cartSection.appendChild(newCartItem);
+            }
+            // Show alert
+            alert(productName + " has been added to the cart.");
+        }
+
+        // Function to handle removing a product from the cart
+        function removeFromCart(productName) {
+            var cartItem = document.getElementById(productName);
+            var quantity = parseInt(cartItem.querySelector('.quantity').textContent);
+            if (quantity > 1) {
+                // If quantity > 1, decrease the quantity by 1
+                cartItem.querySelector('.quantity').textContent = quantity - 1;
+            } else {
+                // If quantity = 1, remove the item from the cart
+                cartItem.remove();
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <!-- Logo and website name go here -->
-        <title>E-Shope</title>
-        <img width="75 px" 
-        src = "images/logo.png">
+        <img src="images/logo.png" width="75px">
         <h1>E-Shope</h1>
     </header>
     <div> 
@@ -25,73 +56,71 @@
         <a href="products.html">Products</a>
         <a href="contact.html">Contact</a>
         <a href="login.html">Login</a>
-        
     </div>
     <main>
         <section class="product-list">
+            <!-- Product list -->
+            <div class="product">
+               <img  src="images/pencil.png" class="Productimage">
+               <h1 class="productName">Pencil</h1>
+               <p class="unitPrice">0.99$</p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img  src="images/pencil.png" class="Productimage">
-                        <h1>Pencil</h1>
-                        <p class="pricetext">0.99$</p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
-
-                     <div class="product">
-                        <img  src="images/sharpener.jpg" class="Productimage">
-                        <h1>Sharpener</h1>
-                        <p class="pricetext">1.50$</p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img  src="images/sharpener.jpg" class="Productimage">
+               <h1>Sharpener</h1>
+               <p class="pricetext">1.50$</p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
 
-                     <div class="product">
-                        <img src="images/eraser.jpg" class="Productimage">
-                        <h1>Eraser</h1>
-                        <p class="pricetext">2.00$</p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img src="images/eraser.jpg" class="Productimage">
+               <h1>Eraser</h1>
+               <p class="pricetext">2.00$</p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img  src="images/colouredPencil.jpg" class="Productimage">
-                        <h1>Color Pencils</h1>
-                        <p class="pricetext">7.50$ </p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img  src="images/colouredPencil.jpg" class="Productimage">
+               <h1 class="productName">Color Pencils</h1>
+               <p class="pricetext">7.50$ </p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img src="images/scissor.jpg" class="Productimage">
-                        <h1>Scissors</h1>
-                        <p class="pricetext">5.00$ </p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img src="images/scissor.jpg" class="Productimage">
+               <h1 class="productName">Scissors</h1>
+               <p class="pricetext">5.00$ </p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img width="350px" src="images/pencilcase.jpeg" class="Productimage">
-                        <h1>Pencil Case</h1>
-                        <p class="pricetext">10.00$ </p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img width="350px" src="images/pencilcase.jpeg" class="Productimage">
+               <h1 class="productName">Pencil Case</h1>
+               <p class="pricetext">10.00$ </p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img width="350px" src="images/binder.jpg" class="Productimage">
-                        <h1>Binder</h1>
-                        <p class="pricetext">8.50$ </p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
+            <div class="product">
+               <img width="350px" src="images/binder.jpg" class="Productimage">
+               <h1 class="productName">Binder</h1>
+               <p class="pricetext">8.50$ </p>
+               <button type ="button">Add to Cart</button>
+            </div>
 
-                     <div class="product">
-                        <img style="width: 350px" src="images/battery.jpg" class="Productimage">
-                        <h1>Batteries</h1>
-                        <p class="pricetext">15.00$ </p>
-                        <button type ="button">Add to Cart</button>
-                     </div>
-         </section>         
+            <div class="product">
+               <img style="width: 350px" src="images/battery.jpg" class="Productimage">
+               <h1 class="productName">Batteries</h1>
+               <p class="pricetext">15.00$ </p>
+               <button type ="button">Add to Cart</button>
+            </div>
+        </section>
     </main>
+    <div id="cart"></div> <!-- Cart display section -->
     <footer>
-        <!-- Copyright notice goes here -->
         <p>Copy right E-Shope @2024</p>
-
     </footer>
 </body>
 </html>
