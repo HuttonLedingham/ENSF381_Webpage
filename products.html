@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
       document.addEventListener('DOMContentLoaded', function afterRender() {
-                var buttonElement = document.querySelector("button[type=button]");
-					buttonElement.addEventListener('click', 
+                var productElements = document.getElementsByClassName("product");
+                for(var i = 0; i < productElements.length; i++){
+                    buttonElement = productElements[i].children[3];
+                    buttonElement.addEventListener('click', 
 					function(){
-                        addToCart();
+                        var productName = this.parentElement.children[1].textContent;
+                        var price = this.parentElement.children[2].textContent;
+                        addToCart(productName, price);
 					})
+                }
             });
         // Function to handle adding a product to the cart
         async function addToCart(productName, unitPrice) {
@@ -24,12 +29,13 @@
                 console.log(addToCart)
             } else {
                 // If not, create a new cart item
-                var cartSection = document.getElementById('cart');
+                var cartSection = document.getElementsByClassName('product-list')[0];
                 var newCartItem = document.createElement('div');
                 newCartItem.id = productName;
+                newCartItem.className = "cart-item";
                 newCartItem.innerHTML = `
                     <p>${productName}</p>
-                    <p class="unit-price">${unitPrice}</p>
+                    <p class="unit-price"> \xa0\- ${unitPrice} -\xa0\ </p>
                     <p class="quantity">1</p>
                     <button class="remove-btn" onclick="removeFromCart('${productName}')">Remove</button>
                 `;

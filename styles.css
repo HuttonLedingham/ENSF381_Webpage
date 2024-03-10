@@ -145,6 +145,11 @@ footer{
     margin-bottom: 10px;
 }
 
+.remove-btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
 .unitPrice{
     color: #007BFF;
     font-weight: bold;
@@ -156,11 +161,23 @@ footer{
     }
 }
 
+.cart-item{
+    display: flex;
+    background-color: lightgrey;
+    justify-content:center;
+    color: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
 
+}
 
 
 button{
-    background-color: #4CAF50;
+    background-color: gray;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
@@ -170,6 +187,7 @@ button{
 
 button:hover{
     background-color: #45A049;
+    cursor: pointer;
 }
 
 
