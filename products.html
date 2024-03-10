@@ -6,8 +6,15 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
+      document.addEventListener('DOMContentLoaded', function afterRender() {
+                var buttonElement = document.querySelector("button[type=button]");
+					buttonElement.addEventListener('click', 
+					function(){
+                        addToCart();
+					})
+            });
         // Function to handle adding a product to the cart
-        function addToCart(productName, unitPrice) {
+        async function addToCart(productName, unitPrice) {
             // Check if the product is already in the cart
             var cartItem = document.getElementById(productName);
             if (cartItem) {
