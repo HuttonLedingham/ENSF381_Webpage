@@ -160,7 +160,10 @@ footer{
         width: calc(100%);
     }
 }
-
+.cart{
+    width: 100%;
+    text-align: center;
+}
 .cart-item{
     display: flex;
     background-color: lightgrey;
