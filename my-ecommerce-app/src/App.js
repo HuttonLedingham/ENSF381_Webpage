@@ -1,7 +1,7 @@
 import './App.css';
 import Homepage from "./components/Homepage";
-import Productpage from "./components/Homepage";
-import Loginpage from "./components/Homepage";
+import Productpage from "./components/Productpage";
+import Loginpage from "./components/Loginpage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
