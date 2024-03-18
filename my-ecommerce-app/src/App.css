@@ -46,3 +46,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+div{
+  margin: 2px;
+}
