@@ -52,9 +52,9 @@ return(
             <h2>Customer Reviews</h2>
             {reviews.map((review, index) => (
                 <div>
+                <p>{review.customerName}</p>
                 <p>{review.reviewContent}</p>
-                <p>Rating: {Array.from({ length: review.stars }, (_, i) => <span key={i}>⭐</span>)}</p>
-                <p>- {review.customerName}</p>
+                <p>Rating: {Array.from({ length: review.stars }, (_, i) => <span key={i}>★</span>)}</p>
                 </div>
             ))}
         </section>
