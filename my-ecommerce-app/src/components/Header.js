@@ -3,7 +3,7 @@ import React from 'react';
 
 function Header(){
 return(
-    <header>
+    <div>
         <div className='headerContent'>        
         <img src="/images/logo.png" alt="logo" width={75}/>
         <p >Company Name</p>
@@ -14,10 +14,7 @@ return(
             <a href='/Productpage' style={{alignItems:"center"}}>Products</a>
             <a href='/Loginpage' style={{float:"right"}}>Login</a>
         </div>
-    </header>
-
-
-
+    </div>
 );
 }
 

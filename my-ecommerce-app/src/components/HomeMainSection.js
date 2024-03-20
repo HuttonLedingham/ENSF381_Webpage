@@ -40,7 +40,7 @@ function HomeMainSection()  {
       }
 
 return(
-    
+   
     <div>
         <section>
             <h1>About us</h1>
@@ -59,9 +59,6 @@ return(
             ))}
         </section>
     </div>
-
-
-
 );
 }
 
