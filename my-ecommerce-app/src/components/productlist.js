@@ -1,7 +1,7 @@
 // ProductList.js
 import React from 'react';
-import ProductItem from './ProductItem';
-import productsData from '../products';
+import ProductItem from './productitem';
+import productsData from '../data/products';
 
 const ProductList = ({ addToCart }) => {
   return (

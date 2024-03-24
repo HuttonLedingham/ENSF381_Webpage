@@ -5,8 +5,8 @@ function Header(){
 return(
     <div>
         <div className='headerContent'>        
-        <img src="/images/logo.png" alt="logo" width={75}/>
-        <p >Company Name</p>
+            <img src="/images/logo.png" alt="logo" width={75}/>
+            <p >Company Name</p>
         </div>
         <p></p>
         <div className='links'>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import CartItem from './CartItem';
+import CartItem from './cartitems';
 
 const Cart = ({ cart, removeFromCart }) => {
   const getTotalCost = () => {
@@ -9,7 +9,7 @@ const Cart = ({ cart, removeFromCart }) => {
 
   return (
     <div className="cart">
-      <h2>Cart</h2>
+      <h2>Shopping Cart</h2>
       {cart.map(item => (
         <CartItem key={item.id} item={item} onRemove={removeFromCart} />
       ))}

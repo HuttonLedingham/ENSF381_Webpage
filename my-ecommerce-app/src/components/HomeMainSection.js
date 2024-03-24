@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import reviewsData from "../data/reviews"
+import reviewsData from "../data/reviews";
 
 function HomeMainSection()  {
     const [reviews, setReviews] = useState([]);

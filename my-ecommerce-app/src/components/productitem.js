@@ -10,7 +10,7 @@ const ProductItem = ({ product, onAddToCart }) => {
 
   return (
     <div className="product-item">
-      <img src={product.image} alt={product.name} />
+      <img src={product.image} alt={product.name} style={{width:"250px"}}/>
       <h3 
         onMouseEnter={toggleDescription}
         onMouseLeave={toggleDescription}
