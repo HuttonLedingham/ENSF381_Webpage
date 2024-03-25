@@ -1,3 +1,10 @@
+/*
+Group Members:
+
+Hutton Ledingham | UCID: 30179507
+Isaac Jacob | UCID: 30152854
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

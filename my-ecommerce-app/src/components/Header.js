@@ -6,7 +6,7 @@ return(
     <div>
         <div className='headerContent'>        
             <img src="/images/logo.png" alt="logo" width={75}/>
-            <p >Company Name</p>
+            <p >E-Shoppe</p>
         </div>
         <p></p>
         <div className='links'>
