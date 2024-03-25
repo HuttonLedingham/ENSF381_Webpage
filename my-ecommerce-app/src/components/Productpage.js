@@ -11,10 +11,12 @@ const ProductPage = () => {
   useEffect(() => {
     console.log("useEffect for loading cart triggered");
     const storedCart = JSON.parse(localStorage.getItem('cart'));
+    if (storedCart !== null){
     if (storedCart.length !== 0) {
       console.log("Stored cart:", storedCart);
       setCart(storedCart);
     }
+  }
   }, []);
 
   useEffect(() => {
