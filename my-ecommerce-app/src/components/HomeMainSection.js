@@ -6,29 +6,25 @@ function HomeMainSection()  {
     const [reviews, setReviews] = useState([]);
   
     useEffect(() => {
-      // Function to fetch random reviews
       const fetchRandomReviews = async () => {
         try {
-          const randomReviews = await getRandomReviews(2); // Fetch 2 random reviews
+          const randomReviews = await getRandomReviews(2); 
           setReviews(randomReviews);
         } catch (error) {
           console.error('Error fetching random reviews:', error);
         }
       };
       
-      fetchRandomReviews(); // Call the function when the component mounts or refreshes
+      fetchRandomReviews(); 
     }, []);
 
     const getRandomReviews = async (count) => {
-        // Simulating an asynchronous operation to fetch reviews
         return new Promise((resolve, reject) => {
           setTimeout(() => {
-            // Shuffle the reviews array to get random reviews
             const shuffledReviews = reviewsData.sort(() => Math.random() - 0.5);
-            // Slice the array to get the specified number of random reviews
             const randomReviews = shuffledReviews.slice(0, count);
             resolve(randomReviews);
-          }, 500); // Simulating a delay for the asynchronous operation
+          }, 500); 
         });
     };
 
